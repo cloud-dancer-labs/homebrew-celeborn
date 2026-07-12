@@ -14,14 +14,14 @@
 
 class Celeborn < Formula
   desc "Long-term context substrate for coding agents (CLI)"
-  homepage "https://github.com/cloud-dancer-labs/celeborn"
-  version "0.1.0"
-  license :cannot_represent # proprietary — © Thot Technologies LLC
+  homepage "https://github.com/cloud-dancer-labs/celeborn-code"
+  version "0.2.1"
+  license "BUSL-1.1" # source-available — © Cloud Dancer; distributed by Thot Technologies LLC
 
   on_macos do
     on_arm do
-      url "https://github.com/cloud-dancer-labs/celeborn/releases/download/v#{version}/celeborn-macos-arm64"
-      sha256 "d436b94c9ae0eb71a53b53470a006401b38abcc86695c36fe118fb6f193ee3dc"
+      url "https://github.com/cloud-dancer-labs/celeborn-code/releases/download/v#{version}/celeborn-macos-arm64"
+      sha256 "5fc31bd4fcb99fa08950532f52bf9dfc4bec7f283f6dd061d2ff024f3e96b9c7"
     end
   end
 
@@ -32,6 +32,6 @@ class Celeborn < Formula
   end
 
   test do
-    assert_match "celeborn", shell_output("#{bin}/celeborn version")
+    assert_match(/celeborn/i, shell_output("#{bin}/celeborn version"))
   end
 end
